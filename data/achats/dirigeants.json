@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name":"dirigeant1",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fonctionE",
+    "id_client": 1
+  },
+  {
+    "id": 2,
+    "name":"dirigeant2",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionG",
+    "id_client": 1
+  },
+  {
+    "id": 3,
+    "name":"dirigeant3",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionF",
+    "id_client": 2
+  },
+  {
+    "id": 4,
+    "name":"dirigeant4",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionX",
+    "id_client": 3
+  },
+  {
+    "id": 5,
+    "name":"dirigeant5",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionY",
+    "id_client": 4
+  },
+  {
+    "id": 6,
+    "name":"dirigeant6",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionB",
+    "id_client": 5
+  },
+  {
+    "id": 7,
+    "name":"dirigeant7",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionC",
+    "id_client": 5
+  },
+  {
+    "id": 8,
+    "name":"dirigeant8",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "fonction": "fontionR",
+    "id_client": 5
+  }
+]

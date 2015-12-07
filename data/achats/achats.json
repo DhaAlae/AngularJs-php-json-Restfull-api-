@@ -1,0 +1,22 @@
+[{
+  "id": 1,
+  "lot_name": "lot1",
+  "superficie": 400
+}, {
+  "id": 2,
+  "lot_name": "lot2",
+  "superficie": 500
+}, {
+  "id": 3,
+  "lot_name": "lot3",
+  "superficie": 600
+}, {
+  "id": 4,
+  "lot_name": "lot4",
+  "superficie": 300
+}, {
+  "id": 5,
+  "lot_name": "lot5",
+  "superficie": 1000
+
+}]

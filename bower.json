@@ -1,0 +1,20 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "Web App to Handle projects",
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-charts": "~0.2.7",
+    "angular-chosen-localytics": "~1.0.7",
+    "angular-loading-bar": "~0.8.0",
+    "angular-route": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "angularUtils-pagination": "angular-utils-pagination#~0.8.4",
+    "bootstrap": "~3.3.5",
+    "bootstrap-tagsinput": "~0.5.0",
+    "chosen": "~1.4.2",
+    "fontawesome": "~4.4.0",
+    "metisMenu": "~2.1.0",
+    "ngAutocomplete": "angular-ngautocomplete#~1.0.0"
+  }
+}

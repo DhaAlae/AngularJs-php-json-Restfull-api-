@@ -1,0 +1,36 @@
+<div class="container">
+
+			<div class="row inner-login">
+
+				<div class="col-md-4 logo">
+
+					<img class="logo-image" src="images/icon.png" alt="logo" />
+					<h4>Medz login Page</h4>
+
+				</div>
+
+				<div class="col-md-5 col-lg-5 login-form">
+							
+					<form class="form-horizontal" name="form1" role="form" >
+
+							  <div class="alert alert-danger" role="alert"  ng-show="valid">
+								  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								  <span class="sr-only">Error:</span>
+								  Utilisateur ou Mot de Pass Incorrect !
+								</div>
+
+						<div class="form-group">
+							<input class="form-control" type="text" name="id" ng-model="id" placeholder="Enter Your Username ..." required>
+							<label class="login-field-icon fui-user" for="login-name"></label>
+						</div>
+
+						<div class="form-group">
+							<input class="form-control" type="password" name="pass" ng-model="pass" placeholder="password" required>
+							<label class="login-field-icon fui-lock" for="login-pass"></label>
+						</div>
+
+						<button type="submit" class="btn-block btn btn-primary" ng-disabled="form1.$invalid" ng-click="login()">Login in</button>
+					</form>
+				</div>
+			</div>
+		</div>

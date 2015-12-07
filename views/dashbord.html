@@ -1,0 +1,41 @@
+<h3>
+  <i class="fa fa-tachometer"></i>
+  dashbord
+</h3>
+<div class="button-add">
+  <div class="pull-right">
+  <input type='text' ng-model="search" placeholder="search :" class="form-control retouch" style="margin-bottom: 7px;">
+</div>
+</div>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      
+      <th>Lot</th>
+      <th>Client</th>
+      <th>Project</th>
+      <th>Date Contrat</th>
+      <th>delai de valorisation (mois)</th>
+       <th>Statut de valorisation</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!-- item in dash.dashbords  -->
+    <tr dir-paginate=" item in dash.dashbords |  filter: search | itemsPerPage: 9"   ng-class="{'success' : item.valoriser == 'Clôturé',
+     'danger' : item.valoriser == 'En arrêt d’activité' || item.valoriser == 'Terrain nu' , 'warning' : item.valoriser == 'En cours de construction' || item.valoriser == 'En activité'}">
+      
+      <td>{{item.nom_lot}}</td>
+      <td>{{item.raison_social}}</td>
+      <td>{{dash.projectnames[$index].nom_project}}</td>
+      <td>{{item.date_contract}}</td>
+      <td>{{item.delai_valorisation}}</td>
+      <td>{{item.valoriser}}</td>
+    </tr>
+  </tbody>
+
+</table>
+<small>Total : {{dash.dashbords.length}}</small>
+<dir-pagination-controls></dir-pagination-controls>
+
+
+

@@ -1,0 +1,31 @@
+[{
+  "id_projet": 1,
+  "id_secteur": 1
+}, {
+  "id_projet": 1,
+  "id_secteur": 2
+}, {
+  "id_projet": 2,
+  "id_secteur": 1
+}, {
+  "id_projet": 2,
+  "id_secteur": 3
+}, {
+  "id_projet": 2,
+  "id_secteur": 9
+}, {
+  "id_projet": 3,
+  "id_secteur": 6
+}, {
+  "id_projet": 4,
+  "id_secteur": 5
+}, {
+  "id_projet": 5,
+  "id_secteur": 6
+}, {
+  "id_projet": 6,
+  "id_secteur": 7
+},{
+  "id_projet": 7,
+  "id_secteur": 7
+}]

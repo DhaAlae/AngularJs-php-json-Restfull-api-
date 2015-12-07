@@ -1,0 +1,75 @@
+<ui-view>
+<h3>
+  <i class="fa fa-briefcase"></i>
+  Les Clients
+</h3>
+
+
+<div ng-show='deleted' class="alert alert-danger alert-dismissible" role="alert">Vous Avez Supprimez le projet : {{projetName}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ </div>
+
+ <div ng-show='success' class="alert alert-success alert-dismissible" role="alert">Vous Avez Bien ajouter le projet!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+</div>
+<div class="dropdown settings pull-left">
+  <a ng-click="cl.plusone()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions </i> <span class="caret"></span></a>
+  <ul class="dropdown-menu dropdown-menu-left">
+<!-- ui-sref="details({id: '1'}) -->
+    <li ng-class="{disabled : cl.voir}"><a href="" ng-click="cl.details()"><i class="fa fa-eye"></i> Details</a></li>
+    <li ng-class="{disabled : cl.voir}"><a href="" ng-click="cl.modifier()"><i class="fa fa-pencil-square-o"></i> Modifier</a></li>
+    <li role="separator" class="divider"></li>
+    <li ng-class="{disabled: cl.delete}"><a href="" ng-click="cl.supprimer()"><i class="fa fa-trash-o"></i> Supprimer</a></li>
+  </ul>
+</div>
+<div class="button-add">
+  <a class="btn btn-primary" ui-sref="achats.clients.ajout"><i class="fa fa-plus"></i> Ajouter</a>
+  <div class="pull-right">
+  <input type='text' ng-model="search" placeholder="search :" class="form-control">
+</div>
+</div>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>
+        <label class="checkbox">
+          <input type="checkbox" class="custom-checkbox" ng-model="cl.master" ng-click="cl.checkall()">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </th>
+      <th>#</th>
+      <th>Raison Social</th>
+      <th>Email</th>
+      <th>Tel</th>
+      <th>Ville</th>
+      <th>Societe mere</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  dir-paginate="client in cl.clients |  filter: search | itemsPerPage: 9"   ng-class="{success: client.check}" >
+      <td>
+        <label class="checkbox">
+          <input type="checkbox" ng-model="client.check" data-toggle="checkbox" class="custom-checkbox">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </td>
+      <td>{{client.id_client}}</td>
+      <td>{{client.raison_social}}</td>
+      <td>{{client.email}}</td>
+      <td>{{client.tel}}</td>
+      <td>{{client.ville}}</td>
+      <td>{{cl.clientnames[$index].raison_social}}</td>
+    </tr>
+  </tbody>
+</table>
+<small>Number of clients : {{cl.clients.length}}</small>
+<dir-pagination-controls></dir-pagination-controls>
+</ui-view>

@@ -1,0 +1,68 @@
+<ui-view>
+
+  <h3>
+    <i class="fa fa-bars"></i> Les Lots
+  </h3>
+
+  </div>
+  <div class="dropdown settings pull-left">
+    <a ng-click="lot.plusone()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions </i> <span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-left">
+      <li ng-class="{'disabled' : lot.voir , 'inactive' : lot.supvente}"><a href="" ng-click="lot.details()"><i class="fa fa-eye"></i> Details</a></li>
+      <li ng-class="{'disabled' : lot.voir , 'inactive' : lot.voir}"><a href="" ng-click="lot.modifier()"><i class="fa fa-pencil-square-o"></i> Modifier Lot</a></li>
+      <li ng-class="{'disabled' : lot.vendlot , 'inactive' : lot.vendlot}"><a href="" ng-click="lot.vendre()"><i class="fa fa-pencil-square-o"></i> Vendre Lot</a></li>
+      <li ng-class="{'disabled' : lot.modvente , 'inactive' : lot.modvente}"><a href="" ng-click="lot.modifierVente()"><i class="fa fa-pencil-square-o"></i> Modifier Vente</a></li>
+      <li ng-class="{'disable' : lot.supvente , 'inactive' : lot.supvente}"><a href="" ng-click="lot.supprimerVente()"><i class="fa fa-pencil-square-o"></i> Supprimer Vente</a></li>
+
+
+      <li role="separator" class="divider"></li>
+      <li ng-class="{'disabled': lot.delete , 'inactive' : lot.delete}"><a href="" ng-click="lot.supprimerLot()"><i class="fa fa-trash-o"></i> Supprimer Lot</a></li>
+    </ul>
+  </div>
+  <div class="button-add">
+    <a class="btn btn-primary" ui-sref="achats.lots.ajout"><i class="fa fa-plus"></i> Ajouter</a>
+     <div class="pull-right">
+  <input type='text' ng-model="search" placeholder="search :" class="form-control">
+</div>
+  </div>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>
+          <label class="checkbox">
+            <input type="checkbox" class="custom-checkbox" ng-model="lot.master" ng-click="lot.checkall()">
+            <span class="icons">
+              <span class="icon-unchecked"></span>
+              <span class="icon-checked"></span>
+            </span>
+
+          </label>
+        </th>
+        <th>#</th>
+        <th>Lot</th>
+        <th>Superficie</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr dir-paginate="item in lot.lots |  filter: search | itemsPerPage: 9" ng-class="itemvendu(item.id_lot)">
+        <td>
+          <label class="checkbox">
+            <input type="checkbox" ng-model="item.check" data-toggle="checkbox" class="custom-checkbox">
+            <span class="icons">
+              <span class="icon-unchecked"></span>
+              <span class="icon-checked"></span>
+            </span>
+          </label>
+        </td>
+        <td>{{item.id_lot}}</td>
+        <td>{{item.nom_lot}}</td>
+        <td>{{item.superficie}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <small><b>Number of Projects</b> : {{lot.lots.length}}</small>
+  <dir-pagination-controls></dir-pagination-controls>
+
+</ui-view>

@@ -1,0 +1,86 @@
+<h3>
+  Vendre Le Lot :
+  <span>{{lot.lotName}}</span>
+</h3>
+<form class="form-horizontal" role="form" ng-submit="lot.vendreLot()">
+
+  <div class="form-group" >
+    <label class="col-sm-2 control-label">Au Client</label>
+    <div class="col-sm-8">
+      <select  data-placeholder="choisir projets ..." ng-model="lot.clientvend" ng-options="item.raison_social for item in lot.clients track by item.id_client"  class="form-control" required>
+      <option value="">Choix du client</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nom Commercial :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" ng-model="lot.commerce" type="text" placeholder="nom commercial ..">
+    </div>
+  </div>
+
+  
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Date Contract :</label>
+    <div class="col-sm-8">
+      <input class="form-control" ng-model="lot.date_contract" id="focusedInput" type="date" placeholder="DD/MM/YYYY" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Date d'acquisition :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" type="date" placeholder="DD/MM/YYYY" ng-model="lot.dateac" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">delai de valorisation (mois) :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" ng-model="lot.delaival" type="number" placeholder="Delai par mois ..">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Prix Unitaire :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" ng-model="lot.prixunitaire" type="number" placeholder="Prix unitaire ..">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Zone Franche :</label>
+    <div class="col-sm-8">
+    <select  id="zoneFranche" ng-model="lot.zoneFranche" class="form-control" >
+        <option value="">Choisir</option>
+        <option value="oui">Oui</option>
+        <option value="non">Non</option>
+      </select>
+<!--       <input class="form-control" id="zonefranche" ng-model="lot.zoneFranche" type="text" placeholder="zone franche .."> -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Investissement :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" ng-model="lot.invest" type="number" placeholder="investissement ..">
+    </div>
+  </div> 
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nombre Employee :</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" ng-model="lot.nombreEmploye" type="number" placeholder="Nombre Employee  ..">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-primary">Vendre</button>
+      <button ui-sref="achats.lots" type="submit" class="btn btn-default">Retours au page des lots</button>
+    </div>
+  </div>
+
+  </form>

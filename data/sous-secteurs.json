@@ -1,0 +1,45 @@
+[{
+  "id": 1,
+  "name": "sousSecteur 1",
+  "id_soussecteur" : 1
+}, {
+  "id": 2,
+  "name": "sousSecteur 2",
+  "id_soussecteur" : 1
+}, {
+  "id": 3,
+  "name": "sousSecteur 3",
+  "id_soussecteur" : 2
+}, {
+  "id": 4,
+  "name": "sousSecteur 4",
+  "id_soussecteur" : 2
+}, {
+  "id": 5,
+  "name": "sousSecteur 5",
+  "id_soussecteur" : 3
+}, {
+  "id": 6,
+  "name": "sousSecteur 6",
+  "id_soussecteur" : 4
+}, {
+  "id": 7,
+  "name": "sousSecteur 7",
+  "id_soussecteur" : 5
+}, {
+  "id": 8,
+  "name": "sousSecteur 8",
+  "id_soussecteur" : 6
+}, {
+  "id": 9,
+  "name": "sousSecteur 9",
+  "id_soussecteur" : 7
+}, {
+  "id": 10,
+  "name": "sousSecteur 10",
+  "id_soussecteur" : 8
+}, {
+  "id": 11,
+  "name": "sousSecteur 11",
+  "id_soussecteur" : 9
+}]

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="eng" ng-app="app">
+
+<head>
+	<!-- Encoding Characters -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>Medz Projects</title>
+
+	<!-- SEO Tags -->
+	<meta name="author" content="">
+	<meta name="description" content="Web app projects">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/flat-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
+	<link rel="stylesheet" href="bower_components/chosen-bootstrap/chosen.bootstrap.min.css">
+	<link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.min.css">
+	<link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+</head>
+
+<body>
+	<!-- HEADER SECTION -->
+	<header ng-show="!$state.includes('login')">
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="header-logo col-xs-12 col-md-2">
+
+					<a ui-sref="dashbord" class="logo text-hide">Projects Web Application</a>
+
+					<a class="hidden-md hidden-lg" role="button" data-toggle="collapse" data-target="#collapse-Sidebar-Menu" aria-expanded="false" aria-controls="collapse-Sidebar-Menu">
+						<i class="fa fa-bars icon-menu"></i>
+					</a>
+
+				</div>
+				<!-- END LOGO -->
+
+				<div class=" header-menu col-xs-12 col-md-10">
+
+					<ul class="menu">
+						<li class="dropdown settings">
+							<a class="dropdown-toggle" href="#/login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-trash-o"> logOut </i></a>
+						</li>
+					</ul>
+
+				</div>
+				<!-- END TOP MENU -->
+
+			</div>
+			<!-- END ROW -->
+
+		</div>
+		<!-- END CONTAINER -->
+
+	</header>
+	<!-- END HEADER -->
+	<div class="login-page" ng-show="$state.includes('login')" ui-view >
+
+<!-- 		<div class="container"> -->
+
+<!-- 			<div class="row inner-login"> -->
+
+<!-- 				<div class="col-md-4 logo"> -->
+
+<!-- 					<img class="logo-image" src="images/icon.png" alt="logo" /> -->
+<!-- 					<h4>Medz login Page</h4> -->
+
+<!-- 				</div> -->
+
+<!-- 				<div class="col-md-5 col-lg-5 login-form"> -->
+<!-- 							action="login.jsp"       method="POST"             -->
+<!-- 					<form class="form-horizontal" name="form1" role="form" > -->
+
+<!-- 							  <div class="alert alert-danger" role="alert" ng-model="valid" ng-show="valid"> -->
+<!-- 								  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> -->
+<!-- 								  <span class="sr-only">Error:</span> -->
+<!-- 								  Utilisateur ou mot de pass Incorrect ! -->
+<!-- 								</div> -->
+
+<!-- 						<div class="form-group"> -->
+<!-- 							<input class="form-control" type="text" name="id" ng-model="log.id" placeholder="Enter Your Username ..." required> -->
+<!-- 							<label class="login-field-icon fui-user" for="login-name"></label> -->
+<!-- 						</div> -->
+
+<!-- 						<div class="form-group"> -->
+<!-- 							<input class="form-control" type="password" name="pass" ng-model="log.pass" placeholder="password" required> -->
+<!-- 							<label class="login-field-icon fui-lock" for="login-pass"></label> -->
+<!-- 						</div> -->
+
+<!-- 						<button type="submit" class="btn-block btn btn-primary" ng-disabled="form1.$invalid" ng-click="login()">Login in</button> -->
+<!-- 					</form> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+
+	</div>
+	<!-- MAIN SECTION  -->
+	<section ng-show="!$state.includes('login')">
+
+		<div class="container-fluid">
+
+			<div class="row">
+				<div id="sticky-anchor"></div>
+				<div class="stick sidebar-menu collapse col-xs-12 col-md-3 col-lg-2" id="collapse-Sidebar-Menu">
+
+					<ul class="navigation-menu" class="metismenu" id="menu" metismenu>
+						<!-- ********************* DASHBORD  ****************** -->
+						<li>
+							<a ui-sref-active="active" ui-sref="dashbord">
+								<i class="fa fa-tachometer fa-lg"></i>
+								<span>Dashbord</span>
+							</a>
+						</li>
+
+
+						<!-- ********************* PROJECTS  ****************** -->
+						<li>
+							<a ui-sref-active="active" ui-sref="projets">
+								<i class="fa fa-university fa-lg"></i>
+								<span>Projects</span>
+								<i ng-if class="fa fa-arrow-left"></i>
+							</a>
+						</li>
+
+
+
+						<!-- ********************* SECTEURS  ****************** -->
+						<li>
+							<a ui-sref-active="active" ui-sref="secteurs">
+								<i class="fa fa-tasks fa-lg"></i>
+								<span>Secteurs</span>
+								<i ng-if class="fa fa-arrow-left"></i>
+							</a>
+						</li>
+
+
+
+						<!-- ********************* ACHATS  ****************** -->
+						<li>
+							<a href="#" aria-expanded="false" ng-class="{active: $state.includes('achats')}">
+								<i class="fa fa-industry fa-lg"></i>
+								<span>Achats</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<li>
+									<a ui-sref="achats.lots" ui-sref-active="sub-active">
+										<i class="fa fa-bars fa-lg"></i>
+										<span>Lots</span>
+									</a>
+								</li>
+
+								<li>
+									<a ui-sref="achats.clients" ui-sref-active="sub-active">
+										<i class="fa fa-briefcase fa-lg"></i>
+										<span>Clients</span>
+									</a>
+								</li>
+
+								<li>
+									<a ui-sref="achats.dirigeants" ui-sref-active="sub-active">
+										<i class="fa fa-male fa-lg"></i>
+										<span>Dirigeants</span>
+									</a>
+								</li>
+							</ul>
+							<!--END SUB-MENU -->
+						</li>
+
+
+
+
+
+						<li>
+							<a href="#" aria-expanded="false" ng-class="{active: $state.includes('settings')}">
+								<i class="fa fa-cog fa-lg"></i>
+								<span>settings</span>
+							</a>
+
+							<ul class="sub-menu" aria-expanded="false">
+								<li>
+									<a ui-sref="settings.ajout" ui-sref-active="sub-active">
+										<i class="fa fa-user-plus fa-lg"></i>
+										<span>ajouter utilisateur</span>
+									</a>
+								</li>
+					
+							</ul>
+							<!--END SUB-MENU -->
+						</li>
+
+
+					</ul>
+					<!--END NAVIGATION MENU -->
+
+				</div>
+				<!-- END SIDEBAR MENU -->
+
+
+
+				<div class="content col-xs-12 col-md-9 col-lg-10" ui-view></div>
+				<!-- END CONTENT -->
+
+			</div>
+			<!-- END ROW -->
+
+		</div>
+		<!-- END CONTAINER FLUID -->
+
+	</section>
+	
+	<!-- Mobile Specific meta -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+	<!-- Javascript -->
+
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
+
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript" src="js/projetsController.js"></script>
+	<script type="text/javascript" src="js/ajoutController.js"></script>
+	<script type="text/javascript" src="js/detailscontroller.js"></script>
+	<script type="text/javascript" src="js/modifierController.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+	<script type="text/javascript" src="js/secteursController.js"></script>
+	<script type="text/javascript" src="js/modifierSecteursController.js"></script>
+
+	<script type="text/javascript" src="js/lotsController.js"></script>
+	<script type="text/javascript" src="js/modifierLotsController.js"></script>
+	<script type="text/javascript" src="js/ajoutLotsController.js"></script>
+	<script type="text/javascript" src="js/vendreLotsController.js"></script>
+	<script type="text/javascript" src="js/modifierVenteController.js"></script>
+
+	<script type="text/javascript" src="js/ajoutSecController.js"></script>
+	<script type="text/javascript" src="js/detailsSecController.js"></script>
+
+	<script type="text/javascript" src="js/clientsController.js"></script>
+	<script type="text/javascript" src="js/ajoutClientController.js"></script>
+	<script type="text/javascript" src="js/detailsClientController.js"></script>
+	<script type="text/javascript" src="js/modifierClientController.js"></script>
+	<script type="text/javascript" src="js/dashbordController.js"></script>
+
+	<script type="text/javascript" src="js/dirigeantsController.js"></script>
+	<script type="text/javascript" src="js/ajoutDirigeantController.js"></script>
+	<script type="text/javascript" src="js/modifierDirigeantController.js"></script>
+	<script type="text/javascript" src="js/userControler.js"></script>
+	<script type="text/javascript" src="js/loginController.js"></script>
+	 <script type="text/javascript" src="js/detailsAchatController.js"></script>
+
+	<script type="text/javascript" src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+	<script type="text/javascript" src="bower_components/chosen/chosen.jquery.min.js"></script>
+
+	<script type="text/javascript" src="common/metismenu.js"></script>
+	<script type="text/javascript" src="bower_components/angular-chosen-localytics/chosen.js"></script>
+	<script type="text/javascript" src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+
+	<script type="text/javascript" src="bower_components/angularUtils-pagination/dirPagination.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js">
+
+	</script>
+	<script type="text/javascript" src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput-angular.js"></script>
+	<script>
+		function sticky_relocate() {
+		    var window_top = $(window).scrollTop();
+		    var div_top = $('#sticky-anchor').offset().top;
+		    if (window_top > div_top) {
+		        $('#collapse-Sidebar-Menu').addClass('stick');
+		        $('.content').addClass('margin');
+		    } else {
+		        $('#collapse-Sidebar-Menu').removeClass('stick');
+		        $('.content').removeClass('margin');
+		    }
+		}
+		
+		$(function () {
+		    $(window).scroll(sticky_relocate);
+		    sticky_relocate();
+		});
+</script>
+</body>
+
+</html>

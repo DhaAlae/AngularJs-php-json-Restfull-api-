@@ -1,0 +1,87 @@
+<ui-view>
+
+<h3>
+  <i class="fa fa-university"></i>
+  Les Projets
+</h3>
+
+<div ng-show='deleted' class="alert alert-danger alert-dismissible" role="alert">Vous Avez Supprimez le projet : {{projetName}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+ </div>
+
+ <div ng-show='success' class="alert alert-success alert-dismissible" role="alert">Vous Avez Bien ajouter le projet!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+<!-- <div class="form-inline form">
+
+  <div class="form-group">
+    <label for="exampleInputName2">Search : </label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Example : Jane Doe">
+  </div>
+
+  <div class="form-group">
+  	<label for="exampleInputName1">Order By : </label>
+     <select class="form-control" id="exampleInputEmail1" placeholder="jane.doe@example.com" ng-model='order'>
+		<option value="name" selected>name</option>
+		<option value="reknown">reknown</option>
+	</select>
+  </div>
+</div> -->
+
+</div>
+<div class="dropdown settings pull-left">
+  <a ng-click="main.plusone()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions </i> <span class="caret"></span></a>
+  <ul class="dropdown-menu dropdown-menu-left">
+<!-- ui-sref="details({id: '1'}) -->
+    <li ng-class="{disabled : main.voir}"><a href="" ng-click="main.details()"><i class="fa fa-eye"></i> Details</a></li>
+    <li ng-class="{disabled : main.voir}"><a href="" ng-click="main.modifier()"><i class="fa fa-pencil-square-o"></i> Modifier</a></li>
+    <li role="separator" class="divider"></li>
+    <li ng-class="{disabled: main.delete}"><a href="#" ng-click="main.supprimer()"><i class="fa fa-trash-o"></i> Supprimer</a></li>
+  </ul>
+</div>
+<div class="button-add">
+  <a class="btn btn-primary" ui-sref="ajout"><i class="fa fa-plus"></i> Ajouter</a>
+  <div class="pull-right">
+	<input type='text' ng-model="search" placeholder="search :" class="form-control">
+</div>
+</div>
+
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>
+        <label class="checkbox">
+          <input type="checkbox" class="custom-checkbox" ng-model="main.master" ng-click="main.checkall()">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </th>
+      <th>#</th>
+      <th>Nom du Projet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr dir-paginate="projet in main.projets |  filter: search | itemsPerPage: 9"   ng-class="{success: projet.check}">
+      <td>
+        <label class="checkbox">
+          <input type="checkbox" ng-model="projet.check" data-toggle="checkbox" class="custom-checkbox">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </td>
+      <td>{{projet.id_project}}</td>
+      <td>{{projet.nom_project}}</td>
+    </tr>
+  </tbody>
+
+</table>
+<small>Total : {{main.projets.length}}</small>
+<dir-pagination-controls></dir-pagination-controls>
+
+</ui-view>

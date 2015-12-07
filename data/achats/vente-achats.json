@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "monatant": 1000,
+    "date_acquistion": "05/02/2004",
+    "date_valorisation": "05/02/2004",
+    "prix_unitaire": 1500,
+    "id_client": 1,
+    "id_lot": 2
+  },
+  {
+    "id": 2,
+    "monatant": 1000,
+    "date_acquistion": "05/02/2004",
+    "date_valorisation": "05/02/2004",
+    "prix_unitaire": 1500,
+    "id_client": 1,
+    "id_lot": 1
+  },
+  {
+    "id": 3,
+    "monatant": 1000,
+    "date_acquistion": "05/02/2004",
+    "date_valorisation": "05/02/2004",
+    "prix_unitaire": 1500,
+    "id_client": 2,
+    "id_lot": 3
+  }
+]

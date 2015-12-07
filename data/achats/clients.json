@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "client_name":"client1",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "rabat"
+  },
+  {
+    "id": 2,
+    "client_name":"client2",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "rabat"
+  },
+  {
+    "id": 3,
+    "client_name":"client3",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "sale"
+  },
+  {
+    "id": 4,
+    "client_name":"client4",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "agadir"
+  },
+  {
+    "id": 5,
+    "client_name":"client5",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "casa"
+  },
+  {
+    "id": 6,
+    "client_name":"client6",
+    "email" : "email@gmail.com",
+    "tel" : "0612323232",
+    "ville": "casa"
+  }
+]

@@ -1,0 +1,69 @@
+<ui-view>
+<h3>
+  <i class="fa fa-male"></i>
+  Les Dirigeants
+</h3>
+
+
+</div>
+<div class="dropdown settings pull-left">
+  <a ng-click="dr.plusone()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions </i> <span class="caret"></span></a>
+  <ul class="dropdown-menu dropdown-menu-left">
+<!-- ui-sref="details({id: '1'}) -->
+    <li ng-class="{disabled : dr.voir}"><a href="" ng-click="dr.modifier()"><i class="fa fa-pencil-square-o"></i> Modifier</a></li>
+    <li ng-class="{disabled: dr.delete}"><a href="" ng-click="dr.sup()" ><i class="fa fa-trash-o"></i> Supprimer</a></li>
+  </ul>
+</div>
+<div class="button-add">
+  <a class="btn btn-primary" ui-sref="achats.dirigeants.ajout"><i class="fa fa-plus"></i> Ajouter</a>
+  <div class="pull-right">
+  <input type='text' ng-model="search" placeholder="search :" class="form-control">
+</div>
+</div>
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>
+        <label class="checkbox">
+          <input type="checkbox" class="custom-checkbox" ng-model="dr.master" ng-click="dr.checkall()">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </th>
+      <th>#</th>
+      <th>Nom du dirigeant</th>
+      <th>Email</th>
+      <th>Tel</th>
+      <th>Fonction</th>
+      <th>Societe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr dir-paginate="dirigeant in dr.dirigeants |  filter: search | itemsPerPage: 9"   ng-class="{success: dirigeant.check}">
+      <td>
+        <label class="checkbox">
+          <input type="checkbox" ng-model="dirigeant.check" data-toggle="checkbox" class="custom-checkbox">
+          <span class="icons">
+            <span class="icon-unchecked"></span>
+            <span class="icon-checked"></span>
+          </span>
+
+        </label>
+      </td>
+      <td>{{dirigeant.id_dirigent}}</td>
+      <td>{{dirigeant.nom}} {{dirigeant.prenom}}</td>
+      <td>{{dirigeant.email}}</td>
+      <td>{{dirigeant.tel}}</td>
+      <td>{{dirigeant.fonction}}</td>
+      <td><a ng-href="#/achats/clients/details/{{dr.clientnames[$index].id}}">{{dr.clientnames[$index].raison_social}}</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<small>Total des dirigeants : {{dr.dirigeants.length}}</small>
+<dir-pagination-controls></dir-pagination-controls>
+
+</ui-view>

@@ -1,0 +1,334 @@
+/*******************************************************
+=== CSS RESET ===
+*******************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  /* Android <= 2.3, iOS <= 4 */
+  -moz-box-sizing: border-box;
+  /* Firefox <= 28 */
+  box-sizing: border-box;
+  /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
+}
+
+/*******************************************************
+=== SASS VARIABLES ===
+*******************************************************/
+/*******************************************************
+=== GENERAL STYLING ===
+*******************************************************/
+html {
+  height: 100%;
+}
+
+input[type=text][disabled] {
+  color: black;
+}
+
+body {
+  font: 14px/21px "Open Sans", sans-serif;
+  color: #333;
+  font-weight: 300;
+  height: 100%;
+}
+
+a {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  font: 36px/1.5em "Open Sans", sans-serif;
+}
+
+h2 {
+  font: 26px/1.5em "Open Sans", sans-serif;
+}
+
+h3 {
+  font: 20px/1.5em "Open Sans", sans-serif;
+}
+
+h4 {
+  font: 18px/1.5em "Open Sans", sans-serif;
+}
+
+h5 {
+  font: 14px/1.5em "Open Sans", sans-serif;
+}
+
+h6 {
+  font: 12px/1.5em "Open Sans", sans-serif;
+}
+
+/*******************************************************
+=== 1. HEADER SECTION ===
+*******************************************************/
+header {
+  padding: 1em 0;
+  background-color: #2b3643;
+  color: #fff;
+}
+header .header-logo {
+  border-bottom: 1px solid #3d4957;
+}
+header .header-logo .logo {
+  background: url("../images/logo1.png") no-repeat;
+  height: 26px;
+  display: block;
+  width: 100px;
+  margin-bottom: 10px;
+  float: left;
+}
+header .header-logo .icon-menu {
+  float: right;
+  margin-top: 3px;
+}
+header .header-menu {
+  margin-top: 10px;
+}
+header .header-menu .menu {
+  margin: 0;
+  float: right;
+}
+header .header-menu .menu > li {
+  display: inline-block;
+  margin-right: 15px;
+}
+header .header-menu .menu .settings {
+  float: right;
+  margin-left: 15px;
+}
+header .header-menu .menu .settings ul {
+  border-radius: 0;
+}
+
+/*******************************************************
+=== 2. MAIN SECTION ===
+*******************************************************/
+.content .login {
+  background-color: red;
+}
+
+section .sidebar-menu {
+  background-color: #364150;
+  padding: 20px 0 0 5px;
+}
+section .sidebar-menu .navigation-menu li a {
+  color: #d9d9d9;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #3d4957;
+}
+section .sidebar-menu .navigation-menu li a:hover {
+  background: #3e4b5c;
+}
+section .sidebar-menu .navigation-menu li a span {
+  margin-left: 10px;
+}
+section .sidebar-menu .navigation-menu li .sub-menu a {
+  padding-left: 25px;
+  font-size: 13px;
+  font-style: italic;
+}
+section .sidebar-menu .navigation-menu li .sub-menu .sub-active {
+  background-color: #3e4b5c;
+}
+section .sidebar-menu .navigation-menu li .active {
+  position: relative;
+  background-color: #2584bc;
+}
+section .sidebar-menu .navigation-menu li .active:hover {
+  background-color: #2584bc;
+}
+section .sidebar-menu .navigation-menu li .active:before {
+  content: "";
+  display: block;
+  background-image: none;
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 8px;
+  background: none;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #fff;
+}
+section .content {
+  padding-top: 20px;
+}
+section .content a {
+  color: #2584bc;
+}
+section .content .btn,
+section .content a[role=button] {
+  color: white;
+}
+section .content h3 {
+  margin-bottom: 20px;
+  background-color: #68b3d1;
+  color: white;
+  padding: 10px;
+  font-weight: 300;
+}
+section .content .settings .dropdown-toggle {
+  background-color: #687882;
+  padding: 10px;
+  display: block;
+  margin-right: 10px;
+}
+section .content .settings ul {
+  border-radius: 0;
+}
+section .content .settings ul a {
+  color: black !important;
+}
+section .content table {
+  margin-top: 10px;
+}
+section .content table tr th .icon-checked {
+  color: #bc1a3e !important;
+}
+section .content table tr td {
+  min-width: 100px;
+}
+section .content table tr td:first-child {
+  width: 40px;
+  min-width: 40px;
+}
+section .content .checkbox {
+  margin: 0;
+  padding: 0;
+  height: 1.5em;
+}
+
+/*******************************************************
+ === LOGIN PAGE ===
+ *******************************************************/
+.login-page {
+  height: 100%;
+  padding-top: 150px;
+  background-color: #364150;
+}
+.login-page .inner-login {
+  padding: 0 1em;
+}
+.login-page .inner-login .logo {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.login-page .inner-login .logo h4 {
+  color: white;
+  margin-top: 1.5em;
+}
+.login-page .inner-login .logo .logo-image {
+  width: 80px;
+  height: 80px;
+}
+.login-page .inner-login .login-form {
+  padding: 40px;
+}
+.login-page .inner-login .login-form .login-field-icon {
+  top: 10px;
+}
+
+/*******************************************************
+ === RESPONSIVE DESIGN ===
+ *******************************************************/
+@media (min-width: 992px) {
+  section .sidebar-menu {
+    display: block;
+    height: 100vh !important;
+  }
+
+  header {
+    padding: 20px 0 0;
+  }
+  header .header-menu {
+    margin-top: 0;
+  }
+  header .header-logo {
+    border: 0;
+  }
+}
+
+.pagination {
+	display: block;
+	text-align: center;
+}
+
+@media (min-width: 992px) {
+#collapse-Sidebar-Menu.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+
+}
+
+.margin{
+     float: right;
+}}
+
+.inactive {
+  pointer-events: none;
+}
+/*# sourceMappingURL=../maps/main.css.map */

@@ -1,0 +1,49 @@
+<!-- ui-view>
+ -->
+<ui-view>
+<h3><i class="fa fa-plus-circle"></i> Modifier mot de passe</h3>
+
+<form class="form-horizontal" role="form" ng-submit="lot.ajoutLots()">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nom du Lot</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" type="text" ng-model="lot.lotname" placeholder="Nom du lot ...">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Superficie</label>
+    <div class="col-sm-8">
+      <input class="form-control" id="focusedInput" type="number" ng-model="lot.superficie" placeholder="Superficie ...">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Les Sous-Projets</label>
+    <div class="col-sm-8">
+      <bootstrap-tagsinput ng-model="sousprojets" > </bootstrap-tagsinput>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Projet :</label>
+    <div class="col-sm-8">
+      <select ng-model="projet" ng-options="item.nom_project for item in lot.projets track by item.id_project"  class="form-control" >
+        <option value="">Choisir Projet</option>
+      </select>
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2">
+      <button type="submit" class="btn btn-primary">Ajouter au Lots</button>
+      <button type="button" class="btn btn-default" ui-sref="achats.lots">Retour au Lots</button>
+    </div>
+  </div>
+
+</form>
+</ui-view>
+
+<!-- 
+</ui-view> -->
